@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</head>
+<body>
+  <nav class="top-bar"></nav>
+  <div class="user-selection">
+    <label for="user-dropdown">User: </label>
+    <select id="user-dropdown"></select>
+  </div>
+  <div class="movie-table"></div>
+</body>
+</html>
