@@ -20,7 +20,7 @@ def get_review():
     args = request.args
     movie_title=args.get('movie_title')
 
-    prompt = "'Write a review of the directing style in the movie \"{movie_title}\". Focus on three key areas: camera work, pacing and character development. Make sure that the review is no longer than 100 words. Provide specific examples and insights into how these elements impacted the movie. For example, the fast pacing conveys the dynamic nature of the characters or with regards to the camera work, the slow pannings and actors close ups convey the introspection the movie wishes to solicitate in the viewers'"
+    prompt = "'Write a review of the the movie \"{movie_title}\". Focus on multiple areas of the movie. Make sure that the review is no longer than 100 words. Provide specific examples and insights into how these elements impacted the movie. For example, the fast pacing conveys the dynamic nature of the characters or with regards to the camera work, the slow pannings and actors close ups convey the introspection the movie wishes to solicitate in the viewers'"
     prompt = prompt.format(
         movie_title=movie_title,
     )
@@ -30,8 +30,7 @@ def get_review():
     max_tokens = 500,
     top_p = 1,
     frequency_penalty = 0.0,
-    presence_penalty=1.0,
-    generate_choices = 5)
+    presence_penalty=1.0)
 
     return response.choices[0].text.strip()
 
